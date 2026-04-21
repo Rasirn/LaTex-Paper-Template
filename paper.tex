@@ -1,0 +1,52 @@
+\documentclass[12pt, a4paper]{article}
+
+% ── 中文支持 ──────────────────────────────────────
+\usepackage{ctex}
+
+% ── 页面设置 ──────────────────────────────────────
+\usepackage[margin=2.5cm]{geometry}
+
+% ── 数学 ──────────────────────────────────────────
+\usepackage{amsmath, amssymb, amsthm}
+
+% ── 图表 ──────────────────────────────────────────
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+\usepackage{booktabs}          % 三线表
+\usepackage{float}
+
+% ── 超链接 & 参考文献 ─────────────────────────────
+\usepackage[hidelinks]{hyperref}
+\usepackage[numbers, sort&compress]{natbib}
+\bibliographystyle{unsrtnat}
+
+% ── 其他常用包 ────────────────────────────────────
+\usepackage{enumitem}
+\usepackage{caption}
+\usepackage{subcaption}
+
+% ─────────────────────────────────────────────────
+\title{论文标题}
+\author{作者姓名}
+\date{\today}
+% ─────────────────────────────────────────────────
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+    \input{chapters/abstract}
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\input{chapters/introduction}
+\input{chapters/method}
+\input{chapters/experiment}
+\input{chapters/conclusion}
+
+\bibliography{references/refs}
+
+\end{document}
